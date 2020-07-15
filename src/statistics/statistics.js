@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 
 function StatisticsInJSX ({statData}){
 
@@ -24,5 +24,13 @@ function StatisticsInJSX ({statData}){
           </section>
         )
 };
+
+StatisticsInJSX.propTypes = {
+  statData: PropTypes.arrayOf({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number
+  })
+}
 
 export default StatisticsInJSX;

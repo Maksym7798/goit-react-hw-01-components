@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function ProfileInJSX ({avatar, name, tag, location, stats})  {
   return(
@@ -27,5 +28,13 @@ function ProfileInJSX ({avatar, name, tag, location, stats})  {
           </div>
         )
 };
+
+ProfileInJSX.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.objectOf(PropTypes.number)
+}
 
 export default ProfileInJSX;

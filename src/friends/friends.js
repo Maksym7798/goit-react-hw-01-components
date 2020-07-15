@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function FriendsInJSX ({frData}){
 
@@ -19,6 +20,15 @@ function FriendsInJSX ({frData}){
             <ul className="friend-list">{markup(frData)}</ul>
           </div>
         )
+}
+
+FriendsInJSX.propTypes = {
+  frData: PropTypes.arrayOf({
+    id: PropTypes.number,
+    isOnline: PropTypes.bool,
+    avatar: PropTypes.string,
+    name: PropTypes.string
+  })
 }
 
 export default FriendsInJSX;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function TransactionsInJSX({transData}){
 
@@ -30,4 +31,9 @@ function TransactionsInJSX({transData}){
         )
 
 }
+
+TransactionsInJSX.propTypes = {
+  transData: PropTypes.arrayOf(PropTypes.string)
+}
+
 export default TransactionsInJSX;
