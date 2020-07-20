@@ -8,7 +8,7 @@ import user from '/Users/maksym/Public/goit-react-hw-01-components/src/user/user
 import Statistics from '/Users/maksym/Public/goit-react-hw-01-components/src/statistics/statistics';
 import statistics from '/Users/maksym/Public/goit-react-hw-01-components/src/statistics/statistical-data.json';
 
-import Friends from '/Users/maksym/Public/goit-react-hw-01-components/src/friends/friends';
+import Friends from '/Users/maksym/Public/goit-react-hw-01-components/src/friends/friendsList';
 import friendsData from '/Users/maksym/Public/goit-react-hw-01-components/src/friends/friends.json';
 
 import Transactions from '/Users/maksym/Public/goit-react-hw-01-components/src/transactions/transactions';
@@ -26,6 +26,7 @@ function ToRender (){
       />
 
       <Statistics
+        title    = {'Upload stats'}
         statData = {statistics}
       />
 

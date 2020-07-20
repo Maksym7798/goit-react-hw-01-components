@@ -33,7 +33,9 @@ function TransactionsInJSX({transData}){
 }
 
 TransactionsInJSX.propTypes = {
-  transData: PropTypes.arrayOf(PropTypes.string)
+  transData: PropTypes.arrayOf(
+    PropTypes.objectOf(PropTypes.string)
+  )   
 }
 
 export default TransactionsInJSX;

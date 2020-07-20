@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-function StatisticsInJSX ({statData}){
+function StatisticsInJSX ({title = '', statData}){
 
   function markup(statData){
       
@@ -17,7 +17,7 @@ function StatisticsInJSX ({statData}){
 
   return( 
           <section className="statistics">
-            <h2 className="title">Upload stats</h2>
+            <h2 className="title">{title}</h2>
             <ul className="stat-list">
               {markup(statData)}
             </ul>
@@ -26,11 +26,13 @@ function StatisticsInJSX ({statData}){
 };
 
 StatisticsInJSX.propTypes = {
-  statData: PropTypes.arrayOf({
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.number
-  })
+  statData: PropTypes.arrayOf(
+      PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number
+    })
+  )
 }
 
 export default StatisticsInJSX;
