@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import FriendListItem from '/Users/maksym/Public/goit-react-hw-01-components/src/friends/friendListItem'
+import FriendListItem from './friendListItem'
 
 function FriendsInJSX ({frData}){
 
