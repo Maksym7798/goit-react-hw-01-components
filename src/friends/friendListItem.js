@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function FriendListItem({frData}){
+function FriendListItem({avatar, isOnline, name}){
   return(
-          frData.map((data) => (
-            <li key={data.id} className="item-fr">
-            <div className={data.isOnline.toString()}></div>
-            <img className="avatar-friends" src={data.avatar} alt="" width="48" />
-            <p className="name-fr">{data.name}</p>
+          
+            <li className = 'item-fr'>
+            <div className={String(isOnline)}></div>
+            <img className="avatar-friends" src={avatar} alt="" width="48" />
+            <p className="name-fr">{name}</p>
             </li>
-          ))
+          
         )
 } 
 

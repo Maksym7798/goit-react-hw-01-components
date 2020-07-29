@@ -7,7 +7,11 @@ function FriendsInJSX ({frData}){
   return(
           <div className='friends'>
             <ul className="friend-list">
-              <FriendListItem frData = {frData}/>
+              {frData.map(friend => <FriendListItem key      = {friend.id} 
+                                                    avatar   = {friend.avatar}
+                                                    isOnline = {friend.isOnline}
+                                                    name     = {friend.name}/>)
+              }
             </ul>
           </div>
         )
